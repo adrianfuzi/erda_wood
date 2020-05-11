@@ -1,0 +1,62 @@
+.footer {
+    grid-area: footer;
+
+    background-color: $color-footer;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". footerLogo ."
+        ". divider ."
+        ". social .";
+
+    &__logo {
+        grid-area: footerLogo;
+    
+        justify-self: center;
+        width: 18rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        @media only screen and (max-width: $bp-m-3) {
+            width: 13rem;
+        }
+    }
+
+    &__divider {
+        grid-area: divider;
+        justify-self: center;
+        border-top: .5px solid rgb(199, 199, 199);
+        margin-bottom: 2rem;
+        width: 20rem;
+    }
+
+    &__social {
+        grid-area: social;
+        justify-self: center;
+        margin-bottom: 3rem;
+
+        &--facebook {
+            filter: contrast(50%);
+            transition: all .2s;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-.3rem);
+                filter: contrast(100%);
+            }
+        }
+
+        &--instagram {
+            filter: contrast(50%);
+            transition: all .5s;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-.3rem);
+                filter: contrast(100%);
+            }
+        }
+    }
+
+}

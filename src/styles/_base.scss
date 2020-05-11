@@ -1,0 +1,80 @@
+$color-primary: #ECA15C;
+$color-secondary: #42362D;
+
+$color-header: linear-gradient(to bottom, rgb(77, 61, 49),rgb(61, 51, 40));
+$color-card: linear-gradient(30deg, rgb(43, 39, 35),rgb(92, 77, 61));
+$color-footer: #1B1B1B;
+$color-contact: linear-gradient(-45deg, rgb(43, 39, 35),rgb(92, 77, 61));
+
+$color-text-primary: #e6e6e6;
+$color-text-secondary: #1b1b1b;
+
+$color-shadow-1: 0px 15px 15px rgba(0, 0, 0, .2);
+$color-shadow-2: 0px 8px 8px rgba(0, 0, 0, .2);
+$color-shadow-3: 0px 20px 20px rgba(0, 0, 0, .5);
+$color-shadow-4: 0px 10px 10px rgba(0, 0, 0, .2);
+$color-shadow-5: 0px 20px 20px rgba(0, 0, 0, .2);
+
+$color-background: linear-gradient(-45deg, rgb(71, 65, 59),rgb(78, 70, 61));
+
+$font-family: 'Nunito', sans-serif;
+
+$bp-l-1: 81.25em; //1300px
+$bp-l-2: 72.5em; // 1160px
+$bp-l-3: 67.18em; // 1075px
+
+$bp-m-1: 58.43em; // 935px
+$bp-m-2: 53.75em; // 860px
+$bp-m-3: 33.125em; // 530px
+
+$bp-s-1: 28.125em; // 450px
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16 = 62.5%
+
+    @media only screen and (max-width: $bp-l-2) {
+        font-size: 55%;
+    }
+
+    @media only screen and (max-width: $bp-m-1) {
+        font-size: 50%;
+    }
+}
+
+body {
+    background: $color-background;
+    font-family: $font-family;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $color-text-primary;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "hero hero hero hero"
+        "works works works works"
+        "about about about about"
+        "contact contact contact contact"
+        "footer footer footer footer";
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 7rem;
+    text-transform: capitalize;
+}
+
+::selection {
+    background: $color-primary;
+}
