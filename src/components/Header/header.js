@@ -5,18 +5,22 @@ import logo from "../../images/logo.svg"
 
 const Header = () => {
   const checkWidth = () => {
-    if (window.innerWidth <= 860) {
-      return -70
-    } else {
-      return -100
+    if (typeof window !== `undefined`) {
+      if (window.innerWidth <= 860) {
+        return -70
+      } else {
+        return -100
+      }
     }
   }
 
   const checkWidthContact = () => {
-    if (window.innerWidth <= 860) {
-      return -50
-    } else {
-      return -80
+    if (typeof window !== `undefined`) {
+      if (window.innerWidth <= 860) {
+        return -50
+      } else {
+        return -80
+      }
     }
   }
 

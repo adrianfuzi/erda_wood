@@ -7,10 +7,12 @@ import scrollImg from "../images/scroll.svg"
 
 const Hero = () => {
   const checkWidth = () => {
-    if (window.innerWidth <= 860) {
-      return -70
-    } else {
-      return -100
+    if (typeof window !== `undefined`) {
+      if (window.innerWidth <= 860) {
+        return -70
+      } else {
+        return -100
+      }
     }
   }
 
