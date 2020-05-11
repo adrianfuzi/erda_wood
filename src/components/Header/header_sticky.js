@@ -4,9 +4,11 @@ import { Link, animateScroll as scroll } from "react-scroll"
 import logo from "../../images/logo.svg"
 
 const HeaderSticky = () => {
-  window.onscroll = function () {
-    scrollFunction()
-  }
+  if (typeof window !== `undefined`) {
+    window.onscroll = function () {
+      scrollFunction()
+    }
+}
 
   const scrollFunction = () => {
     let stickyHeader = ".header__sticky"
